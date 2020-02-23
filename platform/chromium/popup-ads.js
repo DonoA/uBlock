@@ -6,7 +6,7 @@ chrome.runtime.sendMessage({ cmd: "getName" }, function (response) {
         }
     }).then((res) => {
         res.json().then((data) => {
-            document.getElementById("cpmGenerated").innerHTML = `$${data.usd}`;
+            document.getElementById("cpmGenerated").innerHTML = `$${data.usd.toFixed(2)}`;
         })
     });
 });
