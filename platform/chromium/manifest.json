@@ -1,7 +1,8 @@
 {
   "author": "Raymond Hill & contributors",
   "background": {
-    "page": "background.html"
+    "page": "background.html",
+    "persistent": true
   },
   "browser_action": {
     "default_icon": {
@@ -49,6 +50,14 @@
       ],
       "run_at": "document_idle",
       "all_frames": false
+    },
+    {
+      "js": [
+        "/js/google-ad.js"
+      ],
+      "matches": [
+        "https://www.google.com/*"
+      ]
     }
   ],
   "content_security_policy": "script-src 'self'; object-src 'self'",
